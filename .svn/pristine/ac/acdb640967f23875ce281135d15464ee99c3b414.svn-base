@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="36982" started-at="2018-01-24T13:15:59Z" finished-at="2018-01-24T13:16:36Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="36982" started-at="2018-01-24T13:15:59Z" finished-at="2018-01-24T13:16:36Z">
+      <class name="TestCases.Manage_Purchase_Orders_Test">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.Manage_Purchase_Orders_Test@553f17c]" name="setup" is-config="true" duration-ms="19911" started-at="2018-01-24T18:45:59Z" finished-at="2018-01-24T18:46:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="To_Verify_PO_Partial_Status_AND_LOGs()[pri:0, instance:TestCases.Manage_Purchase_Orders_Test@553f17c]" name="To_Verify_PO_Partial_Status_AND_LOGs" duration-ms="16027" started-at="2018-01-24T18:46:19Z" finished-at="2018-01-24T18:46:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Verify_PO_Partial_Status_AND_LOGs -->
+        <test-method status="PASS" signature="down()[pri:0, instance:TestCases.Manage_Purchase_Orders_Test@553f17c]" name="down" is-config="true" duration-ms="995" started-at="2018-01-24T18:46:35Z" finished-at="2018-01-24T18:46:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- down -->
+      </class> <!-- TestCases.Manage_Purchase_Orders_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

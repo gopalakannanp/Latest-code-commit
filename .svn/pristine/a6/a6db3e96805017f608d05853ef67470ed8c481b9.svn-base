@@ -1,0 +1,563 @@
+package Pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import TestBase.TestBase;
+
+public class Reverse_PO_Page extends TestBase {
+
+	@FindBy(id = "search_vendor_chosen")
+	@CacheLookup
+	WebElement Vendordropdown;
+
+	@FindBy(xpath = "//*[@id='search_vendor_chosen']/div/div/input")
+	@CacheLookup
+	WebElement Innertext;
+
+	@FindBy(xpath = "//*[@id='search_vendor_chosen']/div/ul/li[35]") // *[@id='search_vendor_chosen']/div/ul/li
+	@CacheLookup
+	WebElement Autocompletext;
+
+	@FindBy(xpath = "//div[@class='chosen-search']")
+	@CacheLookup
+	WebElement dropdowntextfield;
+
+	@FindBy(id = "search_number")
+	@CacheLookup
+	WebElement Description_text_field;
+
+	@FindBy(xpath = "//*[@id='search_vendor_chosen']/div/ul/li")
+	@CacheLookup
+	WebElement Vendorchoosetext;
+
+	@FindBy(id = "search_part_btn")
+	@CacheLookup
+	WebElement searchpart;
+
+	@FindBy(xpath = "//div[@class='btn-toolbar']/button[@id='submit_btn']")
+	@CacheLookup
+	WebElement searchbtn;
+
+	@FindBy(xpath = "//input[@id='cb_jqGrid01']")
+	@CacheLookup
+	WebElement checkbox_selectall;
+
+	@FindBy(xpath = "//div[@class='btn-toolbar']//button[contains(text(),'Add Selected to PO List')]")
+	@CacheLookup
+	WebElement Addselectedtopobtn;
+
+	@FindBy(xpath = "/html/body/div[14]/ul/li")
+
+	WebElement autofillclick;
+
+	@FindBy(xpath = "//div[contains(text(),'Airfiills')]/following-sibling::div/input[@class='quantity inputs']")
+	@CacheLookup
+	WebElement Order_Qty1;
+
+	@FindBy(xpath = "//div[contains(text(),'suits')]/following-sibling::div/input[@class='quantity inputs']")
+	@CacheLookup
+	WebElement Order_Qty2;
+
+	@FindBy(xpath = "//div[contains(text(),'DVD')]/following-sibling::div/input[@class='quantity inputs']")
+	@CacheLookup
+	WebElement Order_Qty3;
+
+	@FindBy(xpath = "//div[contains(text(),'Camera  Primary Description')]/following-sibling::div/input[@class='quantity inputs']")
+	@CacheLookup
+	WebElement Order_Qty4;
+
+	@FindBy(xpath = "//div[contains(text(),'charters')]/following-sibling::div/input[@class='quantity inputs']")
+	@CacheLookup
+	WebElement Order_Qty5;
+
+	@FindBy(xpath = "//div[contains(text(),'Computers')]/following-sibling::div/input[@class='quantity inputs']")
+	@CacheLookup
+	WebElement Order_Qty6;
+
+	@FindBy(xpath = "//div[contains(text(),'mobile part check  Descriptions')]/following-sibling::div/input[@class='quantity inputs']")
+	@CacheLookup
+	WebElement Order_Qty7;
+
+	@FindBy(xpath = "//div[contains(text(),'Airfiills')]/following-sibling::div/input[@class='quantity_received inputs']  ")
+	@CacheLookup
+	WebElement Receive_Qty1;
+
+	@FindBy(xpath = "//div[contains(text(),'suits')]/following-sibling::div/input[@class='quantity_received inputs']")
+	@CacheLookup
+	WebElement Receive_Qty2;
+
+	@FindBy(xpath = "//div[contains(text(),'DVD')]/following-sibling::div/input[@class='quantity_received inputs']  ")
+	@CacheLookup
+	WebElement Receive_Qty3;
+
+	@FindBy(xpath = "//div[contains(text(),'Camera  Primary Description')]/following-sibling::div/input[@class='quantity_received inputs']")
+	@CacheLookup
+	WebElement Receive_Qty4;
+
+	@FindBy(xpath = "//div[contains(text(),'charters')]/following-sibling::div/input[@class='quantity_received inputs'] ")
+	@CacheLookup
+	WebElement Receive_Qty5;
+
+	@FindBy(xpath = "//div[contains(text(),'Computers')]/following-sibling::div/input[@class='quantity_received inputs']")
+	@CacheLookup
+	WebElement Receive_Qty6;
+
+	@FindBy(xpath = "//div[contains(text(),'mobile part check  Descriptions')]/following-sibling::div/input[@class='quantity_received inputs']")
+	@CacheLookup
+	WebElement Receive_Qty7;
+
+	@FindBy(xpath = "//div[@id='vcomment']/input")
+	@CacheLookup
+	WebElement commentfield;
+
+
+	@FindBy(xpath = "//div[@class='rcvcreate']/button")
+	@CacheLookup
+	WebElement Receive_Goods_btn;
+
+	@FindBy(xpath = "//div[@class='vendorinp']/input[@class='vendor_invoice']")
+	@CacheLookup
+	WebElement Vendorinvoice;
+
+	@FindBy(xpath = "//div[@class='control-group']/p[@id='alert_msg_p']")
+	@CacheLookup
+	WebElement Alertmsg;
+
+	@FindBy(xpath = "//div[@class='btn-toolbar']/button[@id='cancel_ok_btn']")
+	@CacheLookup
+	WebElement OK_btn;
+
+	@FindBy(id = "serial_number00")
+	@CacheLookup
+	WebElement Serial1;
+
+	@FindBy(id = "serial_number10")
+	@CacheLookup
+	WebElement Serial2;
+
+	@FindBy(id = "serial_number20")
+	@CacheLookup
+	WebElement Serial3;
+
+	@FindBy(id = "serial_number30")
+	@CacheLookup
+	WebElement Serial4;
+
+	@FindBy(id = "serial_number01")
+	@CacheLookup
+	WebElement Serial5;
+
+	@FindBy(xpath = "//*[@id='serial_number11']")
+	@CacheLookup
+	WebElement Serial6;
+
+	@FindBy(id = "serial_number21")
+	@CacheLookup
+	WebElement Serial7;
+
+	@FindBy(id = "serial_number31")
+	@CacheLookup
+	WebElement Serial8;
+
+	@FindBy(id = "serial_number02")
+	@CacheLookup
+	WebElement Serial9;
+
+	@FindBy(id = "serial_number12")
+	@CacheLookup
+	WebElement Serial10;
+
+	@FindBy(id = "serial_number22")
+	@CacheLookup
+	WebElement Serial11;
+
+	@FindBy(id = "serial_number32")
+	@CacheLookup
+	WebElement Serial12;
+
+	@FindBy(id = "serial_number03")
+	@CacheLookup
+	WebElement Serial13;
+
+	@FindBy(id = "serial_number13")
+	@CacheLookup
+	WebElement Serial14;
+
+	@FindBy(id = "serial_number01")
+
+	WebElement Serial15;
+
+	@FindBy(id = "serial_number11")
+	@CacheLookup
+	WebElement Serial16;
+
+	@FindBy(id = "serial_number04")
+	@CacheLookup
+	WebElement Serial17;
+
+	@FindBy(id = "serial_number14")
+	@CacheLookup
+	WebElement Serial18;
+
+	@FindBy(id = "serial_number24")
+	@CacheLookup
+	WebElement Serial19;
+
+	@FindBy(id = "serial_number34")
+	@CacheLookup
+	WebElement Serial20;
+
+	@FindBy(id = "serial_number05")
+	@CacheLookup
+	WebElement Serial21;
+
+	@FindBy(id = "serial_number15")
+	@CacheLookup
+	WebElement Serial22;
+
+	@FindBy(id = "serial_number25")
+	@CacheLookup
+	WebElement Serial23;
+
+	@FindBy(id = "serial_number35")
+	@CacheLookup
+	WebElement Serial24;
+
+	@FindBy(id = "serial_number06")
+	@CacheLookup
+	WebElement Serial25;
+
+	@FindBy(id = "serial_number16")
+	@CacheLookup
+	WebElement Serial26;
+
+	@FindBy(id = "serial_number26")
+	@CacheLookup
+	WebElement Serial27;
+
+	@FindBy(id = "serial_number36")
+	@CacheLookup
+	WebElement Serial28;
+
+	@FindBy(id = "sub_btn")
+	@CacheLookup
+	WebElement ADD;
+
+
+	public Reverse_PO_Page() {
+
+		PageFactory.initElements(driver, this);
+
+	}
+
+	public String Create_PO(String Order, String rec, String comm, String serial1, String serial2, String serial3,
+			String serial4, String serial5, String serial6, String serial7, String serial8, String serial9,
+			String serial10, String serial11, String serial12, String serial13, String serial14, String serial15,
+			String serial16, String serial17, String serial18, String serial19, String serial20, String serial21,
+			String serial22, String serial23, String serial24, String serial25, String serial26, String serial27,
+			String serial28) throws InterruptedException {
+
+
+		// driver.get("https://ktds.diveshopx.com/1.9.0/reverse_purchase_order");
+
+		Thread.sleep(3000);
+
+		waitUntilElementClickable(Vendordropdown, 30);
+
+		WebElement get = Innertext;
+
+		List<WebElement> option = get.findElements(By.xpath("//*[@id='search_vendor_chosen']/div/ul/li"));
+
+		for (WebElement options : option) {
+
+			String sta = options.getAttribute("innerHTML"); // Drop down click
+
+			if (sta.contentEquals("VENDORSAMSUNG")) {
+
+				options.click();
+				break;
+			}
+		}
+
+		Thread.sleep(2000);
+
+		searchpart.click();
+
+		Thread.sleep(2000);
+
+		switchWindow();
+		// switchtowindow();
+
+		Thread.sleep(3000);
+
+		waitUntilElementClickable(searchbtn, 30);
+
+		Thread.sleep(2000);
+
+		checkbox_selectall.click();
+
+		Addselectedtopobtn.click();
+
+		// switchtoparentwindow();
+		switchWindow();
+		Order_Qty1.clear();
+
+		Order_Qty1.sendKeys(Order);
+
+		Receive_Qty1.clear();
+
+		Receive_Qty1.sendKeys(rec);
+
+		Order_Qty2.clear();
+
+		Order_Qty2.sendKeys(Order);
+
+		Receive_Qty2.clear();
+
+		Receive_Qty2.sendKeys(rec);
+
+		Order_Qty3.clear();
+
+		Order_Qty3.sendKeys(Order);
+
+		Receive_Qty3.clear();
+
+		Receive_Qty3.sendKeys(rec);
+
+		Order_Qty4.clear();
+
+		Order_Qty4.sendKeys(Order);
+
+		Receive_Qty4.clear();
+
+		Receive_Qty4.sendKeys(rec);
+
+		Order_Qty5.clear();
+
+		Order_Qty5.sendKeys(Order);
+
+		Receive_Qty5.clear();
+
+		Receive_Qty5.sendKeys(rec);
+
+		Order_Qty6.clear();
+
+		Order_Qty6.sendKeys(Order);
+
+		Receive_Qty6.clear();
+
+		Receive_Qty6.sendKeys(rec);
+
+		Order_Qty7.clear();
+
+		Order_Qty7.sendKeys(Order);
+
+		Receive_Qty7.clear();
+
+		Receive_Qty7.sendKeys(rec);
+
+		commentfield.sendKeys(comm);
+
+		Vendorinvoice.sendKeys("12");
+
+		Receive_Goods_btn.click();
+
+		Thread.sleep(3000);
+
+		Serial1.sendKeys(serial1);
+
+		Serial2.sendKeys(serial2);
+
+		Serial3.sendKeys(serial3);
+
+		Serial4.sendKeys(serial4);
+
+		Serial5.sendKeys(serial5);
+
+		Serial16.sendKeys(serial6);
+
+		Serial7.sendKeys(serial7);
+
+		Serial8.sendKeys(serial8);
+
+		Serial9.sendKeys(serial9);
+
+		Serial10.sendKeys(serial10);
+
+		Serial11.sendKeys(serial11);
+
+		Serial12.sendKeys(serial12);
+
+		Serial13.sendKeys(serial13);
+
+		Serial14.sendKeys(serial14);
+
+		Serial15.sendKeys(serial15);
+
+		Serial16.sendKeys(serial16);
+
+		Serial17.sendKeys(serial17);
+
+		Serial18.sendKeys(serial18);
+
+		Serial19.sendKeys(serial19);
+
+		Serial20.sendKeys(serial20);
+
+		Serial21.sendKeys(serial21);
+
+		Serial22.sendKeys(serial22);
+
+		Serial23.sendKeys(serial23);
+
+		Serial24.sendKeys(serial24);
+
+		Serial25.sendKeys(serial25);
+
+		Serial26.sendKeys(serial26);
+
+		Serial27.sendKeys(serial27);
+
+		Serial28.sendKeys(serial28);
+
+		ADD.click();
+
+		Thread.sleep(3000);
+
+		String text = Alertmsg.getText();
+
+		System.out.println(text);
+
+		OK_btn.click();
+
+		return text;
+
+	}
+
+	public String Create_PO_Partial(String Order, String rec, String Barcode1, String Barcode2, String Barcode3,
+			String Barcode4, String Barcode5, String Barcode6, String Barcode7)
+			throws InterruptedException {
+
+		driver.get("https://ktds.diveshopx.com/1.9.0/reverse_purchase_order");
+
+		Thread.sleep(3000);
+
+		waitUntilElementClickable(Vendordropdown, 30);
+
+		WebElement get = Innertext;
+
+		get.sendKeys("VENDORSAMSUNG");
+
+		Thread.sleep(1000);
+
+		Vendorchoosetext.click();
+
+		// driver.findElement(By.xpath("//*[@id='search_vendor_chosen']/div/ul/li")).click();
+
+		Description_text_field.sendKeys(Barcode1);
+
+		autofillclick.click();
+
+		Description_text_field.sendKeys(Barcode2);
+
+		autofillclick.click();
+
+		Description_text_field.sendKeys(Barcode3);
+
+		autofillclick.click();
+
+		Description_text_field.sendKeys(Barcode4);
+
+		autofillclick.click();
+
+		Description_text_field.sendKeys(Barcode5);
+
+		autofillclick.click();
+		Description_text_field.sendKeys(Barcode6);
+
+		autofillclick.click();
+
+		Description_text_field.sendKeys(Barcode7);
+
+		autofillclick.click();
+
+		Order_Qty1.clear();
+
+		Order_Qty1.sendKeys(Order);
+
+		Receive_Qty1.clear();
+
+		Receive_Qty1.sendKeys(rec);
+
+		Order_Qty2.clear();
+
+		Order_Qty2.sendKeys(Order);
+
+		Receive_Qty2.clear();
+
+		Receive_Qty2.sendKeys(rec);
+
+		Order_Qty3.clear();
+
+		Order_Qty3.sendKeys(Order);
+
+		Receive_Qty3.clear();
+
+		Receive_Qty3.sendKeys(rec);
+
+		Order_Qty4.clear();
+
+		Order_Qty4.sendKeys(Order);
+
+		Receive_Qty4.clear();
+
+		Receive_Qty4.sendKeys(rec);
+
+		Order_Qty5.clear();
+
+		Order_Qty5.sendKeys(Order);
+
+		Receive_Qty5.clear();
+
+		Receive_Qty5.sendKeys(rec);
+
+		Order_Qty6.clear();
+
+		Order_Qty6.sendKeys(Order);
+
+		Receive_Qty6.clear();
+
+		Receive_Qty6.sendKeys(rec);
+
+		Order_Qty7.clear();
+
+		Order_Qty7.sendKeys(Order);
+
+		Receive_Qty7.clear();
+
+		Receive_Qty7.sendKeys(rec);
+
+		Vendorinvoice.sendKeys("12");
+
+		Receive_Goods_btn.click();
+
+		Thread.sleep(3000);
+
+		String text = Alertmsg.getText();
+
+		System.out.println(text);
+
+		OK_btn.click();
+
+		return text;
+
+
+	}
+
+}

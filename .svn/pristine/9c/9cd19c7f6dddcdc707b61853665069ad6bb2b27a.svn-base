@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes">
+  <test thread-count="5" name="Test" parallel="classes" preserve-order="true">
+    <classes>
+      <class name="TestCases.Create_Reverse_PO_with_Partial_Closed_Test"/>
+      <class name="TestCases.Manage_Purchase_Orders_Partial_Status_Test"/>
+      <class name="TestCases.Product_Page_Test_For_Reverse_PO_Product"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

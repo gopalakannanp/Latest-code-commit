@@ -1,0 +1,86 @@
+package TestCases;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import Pages.HomePage;
+import Pages.LoginPage;
+import Pages.Reverse_PO_Page;
+import TestBase.TestBase;
+import Util.TestUtil;
+
+
+public class Reverse_PO_Page_Test extends TestBase {
+
+	Reverse_PO_Page RPO;
+
+	LoginPage loginpage;
+
+	HomePage homepage;
+
+	static TestUtil util = new TestUtil();
+
+	String sheetName = "Sheet1";
+
+	String sheetName1 = "Sheet2";
+
+	public Reverse_PO_Page_Test() {
+
+		super();
+	}
+
+	@DataProvider
+	public Object[][] getCRMTestData() {
+		Object data[][] = TestUtil.getTestData(sheetName);
+		return data;
+	}
+
+	@DataProvider
+	public Object[][] getCRMTestData1() {
+		Object data[][] = TestUtil.getTestData(sheetName1);
+		return data;
+	}
+
+	@BeforeMethod
+
+	public void setup() throws InterruptedException {
+
+		initialization();
+
+		loginpage = new LoginPage();
+
+		homepage = new HomePage();
+
+		RPO = new Reverse_PO_Page();
+
+		homepage = loginpage.login(prop.getProperty("un"), prop.getProperty("ps"));
+
+		homepage.ClickOnCreateReversePurchaseOrder();
+
+	}
+
+	@Test(dataProvider = "getCRMTestData", enabled = false)
+
+	public void test(String Order, String rec, String comm) throws InterruptedException {
+
+		String msg = RPO.Create_PO(Order, rec, comm);
+
+		Assert.assertEquals(msg, "Purchase Order Completed.");
+
+	}
+
+	@Test(dataProvider = "getCRMTestData1", enabled = true)
+
+	public void To_Verify_Create_RPO_with_Partial_Status(String Order, String rec, String Barcode1, String Barcode2,
+			String Barcode3, String Barcode4, String Barcode5, String Barcode6, String Barcode7)
+			throws InterruptedException {
+
+		String msg = RPO.Create_PO_Partial(Order, rec, Barcode1, Barcode2, Barcode3, Barcode4, Barcode5, Barcode6,
+				Barcode7);
+
+		Assert.assertEquals(msg, "Purchase Order Completed.");
+
+	}
+}

@@ -1,0 +1,61 @@
+package TestCases;
+
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import Pages.HomePage;
+import Pages.LoginPage;
+import Pages.Reverse_PO_Page;
+import TestBase.TestBase;
+import Util.TestUtil;
+
+
+public class Reverse_PO_Page_Test extends TestBase {
+	
+	Reverse_PO_Page RPO;
+	LoginPage loginpage;
+	HomePage homepage;
+
+	String sheetName = "Sheet1";
+
+
+	public Reverse_PO_Page_Test() {
+		
+		super();
+	}
+	
+	@DataProvider
+	public Object[][] getCRMTestData() {
+		Object data[][] = TestUtil.getTestData(sheetName);
+		return data;
+	}
+	
+	@BeforeMethod
+	
+	public void setup() throws InterruptedException {
+		
+		initialization();
+		
+		loginpage = new LoginPage();
+
+		homepage = new HomePage();
+
+		RPO = new Reverse_PO_Page();
+
+		homepage = loginpage.login(prop.getProperty("un"), prop.getProperty("ps"));
+		
+
+		
+	}
+
+	
+	
+	@Test(dataProvider = "getCRMTestData")
+	
+	public void test(String Order, String rec, String comm) throws InterruptedException {
+
+		RPO.Create_PO(Order, rec, comm);
+
+	}
+}

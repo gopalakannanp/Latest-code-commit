@@ -1,0 +1,19 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
+
+import TestBase.TestBase;
+
+public class Create_New_Purchase_Order_Page extends TestBase {
+
+	@FindBy(id = "vendor_id")
+	@CacheLookup
+	WebElement vendor_name_dropdown;
+
+	@FindBy(xpath = "//*[@id='create_new_po']/div[2]/div[1]/div[2]/div/span/span/div/div/a")
+	@CacheLookup
+	WebElement Go_btn;
+
+}

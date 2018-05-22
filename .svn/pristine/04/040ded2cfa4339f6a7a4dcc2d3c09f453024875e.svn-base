@@ -1,0 +1,27 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import TestBase.TestBase;
+
+public class Manage_Purchase_Orders extends TestBase {
+
+	@FindBy(xpath = "//*[@id='search_btn']")
+
+	WebElement Search_btn;
+
+	public Manage_Purchase_Orders() {
+
+		PageFactory.initElements(driver, this);
+
+	}
+
+	public void Manage_PO() {
+
+		waitUntilElementClickable(Search_btn, 60);
+
+	}
+
+}

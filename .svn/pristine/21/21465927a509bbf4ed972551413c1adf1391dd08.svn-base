@@ -1,0 +1,197 @@
+package Pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import TestBase.TestBase;
+
+
+public class Reverse_PO_Page extends TestBase {
+	
+	@FindBy(id="search_vendor_chosen")
+	@CacheLookup
+	WebElement Vendordropdown;
+
+	@FindBy(xpath = "//*[@id='search_vendor_chosen']/div/div/input")
+	@CacheLookup
+	WebElement Innertext;
+	
+	@FindBy(xpath = "//*[@id='search_vendor_chosen']/div/ul/li[35]")
+	@CacheLookup
+	WebElement Autocompletext;
+
+	@FindBy(xpath = "//div[@class='chosen-search']")
+	@CacheLookup
+	WebElement dropdowntextfield;
+
+	@FindBy(id = "search_number")
+	@CacheLookup
+	WebElement Description_text_field;
+
+	@FindBy(id = "search_part_btn")
+	@CacheLookup
+	WebElement searchpart;
+
+	@FindBy(xpath = "//*[@id='submit_btn']")
+	@CacheLookup
+	WebElement searchbtn;
+	
+	@FindBy(xpath = "/html/body/div[14]/ul/li")
+	@CacheLookup
+	WebElement autofillclick;
+
+
+	@FindBy(xpath = "//div[contains(text(),'50-ft. 3/8\" LP Hose')]/following-sibling::div/input[@class='quantity inputs']")
+	@CacheLookup
+	WebElement Order_Qty1;
+
+	@FindBy(xpath = "//div[contains(text(),'Miflex 44\" LP Hose')]/following-sibling::div/input[@class='quantity inputs']")
+	@CacheLookup
+	WebElement Order_Qty2;
+
+	@FindBy(xpath = "//div[contains(text(),'50-ft. 3/8\" LP Hose')]/following-sibling::div/input[@class='quantity_received inputs'] ")
+	@CacheLookup
+	WebElement Receive_Qty1;
+
+	@FindBy(xpath = "//div[contains(text(),'Miflex 44\" LP Hose')]/following-sibling::div/input[@class='quantity_received inputs']")
+	@CacheLookup
+	WebElement Receive_Qty2;
+
+	@FindBy(id = "cb_jqGrid01")
+	@CacheLookup
+	WebElement checkbox_selectall;
+
+	@FindBy(xpath = "//div[@class='btn-toolbar']//button[contains(text(),'Add Selected to PO List')]")
+	@CacheLookup
+	WebElement Addselectedtopobtn;
+
+	@FindBy(xpath = "//div[@class='rcvcreate']/button")
+	@CacheLookup
+	WebElement Receive_Goods_btn;
+
+	@FindBy(xpath = "//div[@class='vendorinp']/input[@class='vendor_invoice']")
+	@CacheLookup
+	WebElement Vendorinvoice;
+
+	@FindBy(xpath = "//div[@class='control-group']/p[@id='alert_msg_p']")
+	@CacheLookup
+	WebElement Alertmsg;
+
+	@FindBy(id = "cancel_ok_btn")
+	@CacheLookup
+	WebElement OK_btn;
+
+
+
+
+	public Reverse_PO_Page() {
+		
+		PageFactory.initElements(driver, this);
+		
+	}
+	
+	
+
+	public void Create_PO(String Order, String rec, String comm) throws InterruptedException {
+
+		driver.get("http://192.168.1.83/develop_nd/reverse_purchase_order");
+
+		Thread.sleep(2000);
+
+		Vendordropdown.click();
+
+		WebElement get = Innertext;
+
+		// get.sendKeys("Go Pro");
+
+		// Autocompletext.click();
+
+		List<WebElement> option = get.findElements(By.xpath("//*[@id='search_vendor_chosen']/div/ul/li"));
+
+		for (WebElement options : option) {
+
+			String sta = options.getAttribute("innerHTML");
+
+			if (sta.contentEquals("XS Scuba")) {
+
+				options.click();
+				break;
+			}
+		}
+
+		// Description_text_field.sendKeys("Pn02");
+
+		// autofillclick.click();
+		
+		Thread.sleep(2000);
+
+		searchpart.click();
+
+		switchtowindow();
+
+		Thread.sleep(4000);
+
+		waitUntilElementClickable(searchbtn, 30);
+
+		Thread.sleep(2000);
+
+		checkbox_selectall.click();
+
+		Addselectedtopobtn.click();
+
+		switchtoparentwindow();
+
+		Thread.sleep(3000);
+
+		Order_Qty1.clear();
+
+		Thread.sleep(3000);
+		Order_Qty1.sendKeys(Order);
+		Thread.sleep(3000);
+
+
+
+		Receive_Qty1.clear();
+		Thread.sleep(1000);
+		OK_btn.click();
+
+		/*
+		 * JavascriptExecutor jse = (JavascriptExecutor) driver; jse.
+		 * executeScript("document.getElementsByClassName('quantity_received inputs').value = '12';"
+		 * );
+		 */
+
+		Receive_Qty1.sendKeys(rec);
+
+		Thread.sleep(3000);
+
+		Order_Qty2.clear();
+
+		Order_Qty2.sendKeys(Order);
+		Thread.sleep(3000);
+		Receive_Qty2.clear();
+		Thread.sleep(1000);
+		OK_btn.click();
+		Receive_Qty2.sendKeys(rec);
+		Thread.sleep(3000);
+
+		Vendorinvoice.sendKeys("12");
+
+		Receive_Goods_btn.click();
+
+
+	}
+	
+
+	
+
+	
+}
+	
+	
+	

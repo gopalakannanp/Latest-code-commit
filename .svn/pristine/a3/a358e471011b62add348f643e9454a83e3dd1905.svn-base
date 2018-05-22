@@ -1,0 +1,26 @@
+<h2>Methods run, sorted chronologically</h2><h3>&gt;&gt; means before, &lt;&lt; means after</h3><p/><br/><em>Default suite</em><p/><small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table border="1">
+<tr><th>Time</th><th>Delta (ms)</th><th>Suite<br>configuration</th><th>Test<br>configuration</th><th>Class<br>configuration</th><th>Groups<br>configuration</th><th>Method<br>configuration</th><th>Test<br>method</th><th>Thread</th><th>Instances</th></tr>
+<tr bgcolor="657fd0">  <td>18/02/02 19:55:45</td>   <td>0</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="Select_Parts_To_Order_Page_Test.To_Verify_ADD_TO_CART()[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]">To_Verify_ADD_TO_CART</td> 
+  <td>main@1589683045</td>   <td></td> </tr>
+<tr bgcolor="657fd0">  <td>18/02/02 19:56:37</td>   <td>51762</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="Select_Parts_To_Order_Page_Test.To_Verify_Create_PO()[pri:1, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]">To_Verify_Create_PO</td> 
+  <td>main@1589683045</td>   <td></td> </tr>
+<tr bgcolor="657fd0">  <td>18/02/02 19:56:11</td>   <td>26333</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="Select_Parts_To_Order_Page_Test.To_Verify_Quick_ADD()[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]">To_Verify_Quick_ADD</td> 
+  <td>main@1589683045</td>   <td></td> </tr>
+<tr bgcolor="657fd0">  <td>18/02/02 19:55:57</td>   <td>11905</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;Select_Parts_To_Order_Page_Test.close(org.testng.ITestResult)[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]">&lt;&lt;close</td> 
+<td>&nbsp;</td>  <td>main@1589683045</td>   <td></td> </tr>
+<tr bgcolor="657fd0">  <td>18/02/02 19:56:22</td>   <td>36730</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;Select_Parts_To_Order_Page_Test.close(org.testng.ITestResult)[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]">&lt;&lt;close</td> 
+<td>&nbsp;</td>  <td>main@1589683045</td>   <td></td> </tr>
+<tr bgcolor="657fd0">  <td>18/02/02 19:56:55</td>   <td>70131</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;Select_Parts_To_Order_Page_Test.close(org.testng.ITestResult)[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]">&lt;&lt;close</td> 
+<td>&nbsp;</td>  <td>main@1589683045</td>   <td></td> </tr>
+<tr bgcolor="657fd0">  <td>18/02/02 19:56:56</td>   <td>71313</td> <td>&nbsp;</td><td title="&lt;&lt;Select_Parts_To_Order_Page_Test.endReport()[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]">&lt;&lt;endReport</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1589683045</td>   <td></td> </tr>
+<tr bgcolor="657fd0">  <td>18/02/02 19:55:30</td>   <td>-15256</td> <td>&nbsp;</td><td title="&gt;&gt;Select_Parts_To_Order_Page_Test.setExtent()[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]">&gt;&gt;setExtent</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1589683045</td>   <td></td> </tr>
+<tr bgcolor="657fd0">  <td>18/02/02 19:55:30</td>   <td>-14814</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="&gt;&gt;Select_Parts_To_Order_Page_Test.setup()[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]">&gt;&gt;setup</td> 
+<td>&nbsp;</td>  <td>main@1589683045</td>   <td></td> </tr>
+<tr bgcolor="657fd0">  <td>18/02/02 19:55:58</td>   <td>13118</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="&gt;&gt;Select_Parts_To_Order_Page_Test.setup()[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]">&gt;&gt;setup</td> 
+<td>&nbsp;</td>  <td>main@1589683045</td>   <td></td> </tr>
+<tr bgcolor="657fd0">  <td>18/02/02 19:56:23</td>   <td>37864</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="&gt;&gt;Select_Parts_To_Order_Page_Test.setup()[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]">&gt;&gt;setup</td> 
+<td>&nbsp;</td>  <td>main@1589683045</td>   <td></td> </tr>
+</table>

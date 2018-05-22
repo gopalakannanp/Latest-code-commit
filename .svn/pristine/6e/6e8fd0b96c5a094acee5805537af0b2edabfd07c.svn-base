@@ -1,0 +1,56 @@
+package TestCases;
+
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import Pages.HomePage;
+import Pages.LoginPage;
+import Pages.Manage_Purchase_Orders;
+import Pages.Reverse_PO_Page;
+import TestBase.TestBase;
+
+
+public class Reverse_PO_Page_Test extends TestBase {
+	
+	Reverse_PO_Page RPO;
+	LoginPage loginpage;
+	HomePage homepage;
+
+	Manage_Purchase_Orders MPO;
+	public Reverse_PO_Page_Test() {
+		
+		super();
+	}
+	
+	
+	@BeforeMethod
+	
+	public void setup() throws InterruptedException {
+		
+		initialization();
+		
+		loginpage = new LoginPage();
+
+		homepage = new HomePage();
+
+		RPO = new Reverse_PO_Page();
+
+		MPO = new Manage_Purchase_Orders();
+
+		homepage = loginpage.login(prop.getProperty("un"), prop.getProperty("ps"));
+		
+		homepage.ClickonManagePurchaseOrder();
+		
+	}
+
+	
+	
+	@Test
+	
+	public void test() throws InterruptedException {
+
+		// RPO.Create_PO();
+
+		MPO.Manage_PO();
+	}
+}

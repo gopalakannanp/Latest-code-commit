@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="87369" started-at="2018-02-02T14:25:30Z" finished-at="2018-02-02T14:26:57Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="87369" started-at="2018-02-02T14:25:30Z" finished-at="2018-02-02T14:26:57Z">
+      <class name="TestCases.Select_Parts_To_Order_Page_Test">
+        <test-method status="PASS" signature="setExtent()[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]" name="setExtent" is-config="true" duration-ms="427" started-at="2018-02-02T19:55:30Z" finished-at="2018-02-02T19:55:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setExtent -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]" name="setup" is-config="true" duration-ms="14814" started-at="2018-02-02T19:55:30Z" finished-at="2018-02-02T19:55:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="To_Verify_ADD_TO_CART()[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]" name="To_Verify_ADD_TO_CART" duration-ms="11901" started-at="2018-02-02T19:55:45Z" finished-at="2018-02-02T19:55:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Verify_ADD_TO_CART -->
+        <test-method status="PASS" signature="close(org.testng.ITestResult)[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]" name="close" is-config="true" duration-ms="1214" started-at="2018-02-02T19:55:57Z" finished-at="2018-02-02T19:55:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=To_Verify_ADD_TO_CART status=SUCCESS method=Select_Parts_To_Order_Page_Test.To_Verify_ADD_TO_CART()[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]" name="setup" is-config="true" duration-ms="13215" started-at="2018-02-02T19:55:58Z" finished-at="2018-02-02T19:56:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="To_Verify_Quick_ADD()[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]" name="To_Verify_Quick_ADD" duration-ms="10396" started-at="2018-02-02T19:56:11Z" finished-at="2018-02-02T19:56:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Verify_Quick_ADD -->
+        <test-method status="PASS" signature="close(org.testng.ITestResult)[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]" name="close" is-config="true" duration-ms="1130" started-at="2018-02-02T19:56:22Z" finished-at="2018-02-02T19:56:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=To_Verify_Quick_ADD status=SUCCESS method=Select_Parts_To_Order_Page_Test.To_Verify_Quick_ADD()[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]" name="setup" is-config="true" duration-ms="13899" started-at="2018-02-02T19:56:23Z" finished-at="2018-02-02T19:56:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="To_Verify_Create_PO()[pri:1, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]" name="To_Verify_Create_PO" duration-ms="18364" started-at="2018-02-02T19:56:37Z" finished-at="2018-02-02T19:56:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Verify_Create_PO -->
+        <test-method status="PASS" signature="close(org.testng.ITestResult)[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]" name="close" is-config="true" duration-ms="1181" started-at="2018-02-02T19:56:55Z" finished-at="2018-02-02T19:56:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=To_Verify_Create_PO status=SUCCESS method=Select_Parts_To_Order_Page_Test.To_Verify_Create_PO()[pri:1, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:TestCases.Select_Parts_To_Order_Page_Test@73ad2d6]" name="endReport" is-config="true" duration-ms="784" started-at="2018-02-02T19:56:56Z" finished-at="2018-02-02T19:56:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- TestCases.Select_Parts_To_Order_Page_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

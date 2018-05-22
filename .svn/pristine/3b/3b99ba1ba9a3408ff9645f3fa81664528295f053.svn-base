@@ -1,0 +1,65 @@
+package TestCases;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import Pages.HomePage;
+import Pages.LoginPage;
+import Pages.Product_Page_For_Reverse_PO;
+import TestBase.TestBase;
+import Util.TestUtil;
+
+public class Product_Page_Test_For_Reverse_PO_Product extends TestBase {
+
+	LoginPage loginpage;
+
+	HomePage homepage;
+
+	static TestUtil util = new TestUtil();
+
+	Product_Page_For_Reverse_PO productpage;
+
+	String sheetName = "Testdata";
+
+	@BeforeMethod
+
+	public void setup() throws InterruptedException {
+
+		initialization();
+
+		loginpage = new LoginPage();
+
+		homepage = new HomePage();
+
+		productpage = new Product_Page_For_Reverse_PO();
+
+		homepage = loginpage.login(prop.getProperty("un"), prop.getProperty("ps"));
+
+		homepage.clickonproductpage();
+
+	}
+
+	@DataProvider
+	public Object[][] getCRMTestData() {
+		Object data[][] = TestUtil.getTestData(sheetName);
+		return data;
+	}
+
+
+	@Test(dataProvider = "getCRMTestData")
+
+	public void test(String partnumber) throws InterruptedException {
+
+		productpage.Verify_Products_stock_logs(partnumber);
+
+	}
+
+	@AfterMethod
+
+	public void down() {
+
+		driver.quit();
+	}
+}

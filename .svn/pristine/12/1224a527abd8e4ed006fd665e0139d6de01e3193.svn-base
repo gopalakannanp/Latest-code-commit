@@ -1,0 +1,76 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import TestBase.TestBase;
+
+public class Manage_Purchase_Orders extends TestBase {
+
+	@FindBy(xpath = "//*[@id='search_btn']")
+
+	WebElement Search_btn;
+
+	@FindBy(xpath = "//div[@class='switch switch-mini switch-default has-switch']/div//label[@class='switch-mini']")
+
+	WebElement List_Manual_PO_btn;
+
+	@FindBy(id = "po_status")
+
+	WebElement PO_Status_dropdown;
+
+	@FindBy(xpath = "//table[@id='jqGrid01']/tbody/tr[2]/td[@aria-describedby='jqGrid01_PoOrder.po_number'] ")
+
+	WebElement part_no_click;
+
+	@FindBy(xpath = "//a[@id='showmore']/i")
+
+	WebElement Log_btn;
+
+	@FindBy(xpath = "//div[@id='part_log_details']/p")
+
+	WebElement Log_msg;
+
+	public Manage_Purchase_Orders() {
+
+		PageFactory.initElements(driver, this);
+
+	}
+
+	public String Manage_PO() throws InterruptedException {
+
+		Thread.sleep(2000);
+
+		List_Manual_PO_btn.click();
+
+		selectDropdown(PO_Status_dropdown, "Closed");
+
+		waitUntilElementClickable(Search_btn, 30);
+
+		String text = driver
+				.findElement(By.xpath(
+						"//table[@id='jqGrid01']/tbody/tr[2]/td[@aria-describedby='jqGrid01_PoOrder.po_status']"))
+				.getText();
+
+		System.out.println(text);
+
+		Thread.sleep(2000);
+
+		driver.findElement(By.xpath("//table[@id='jqGrid01']/tbody/tr[2]/td/a[@title='Review']")).click();
+
+		// part_no_click.click();
+
+		Thread.sleep(3000);
+
+		waitUntilElementClickable(Log_btn, 60);
+
+		String msg = Log_msg.getText();
+
+		System.out.println(msg);
+
+		return text;
+	}
+
+}

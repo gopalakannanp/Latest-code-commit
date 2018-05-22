@@ -1,0 +1,127 @@
+package Pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import TestBase.TestBase;
+
+
+public class Reverse_PO_Page extends TestBase {
+	
+	@FindBy(id="search_vendor_chosen")
+	@CacheLookup
+	WebElement Vendordropdown;
+
+	@FindBy(xpath = "//*[@id='search_vendor_chosen']/div/div/input")
+	@CacheLookup
+	WebElement Innertext;
+	
+	@FindBy(xpath = "//div[@class='chosen-search']")
+	@CacheLookup
+	WebElement dropdowntextfield;
+
+	@FindBy(id = "search_number")
+	@CacheLookup
+	WebElement Description_text_field;
+
+	@FindBy(id = "search_part_btn")
+	@CacheLookup
+	WebElement searchpart;
+
+	@FindBy(xpath = "//*[@id='submit_btn']")
+	@CacheLookup
+	WebElement searchbtn;
+	
+	@FindBy(xpath = "/html/body/div[14]/ul/li")
+	@CacheLookup
+	WebElement autofillclick;
+
+	@FindBy(id = "cb_jqGrid01")
+	@CacheLookup
+	WebElement checkbox_selectall;
+
+	@FindBy(xpath = "//div[@class='btn-toolbar']//button[contains(text(),'Add Selected to PO List')]")
+	@CacheLookup
+	WebElement Addselectedtopobtn;
+
+	@FindBy(xpath = "//div[@class='rcvcreate']/button")
+	@CacheLookup
+	WebElement Receive_Goods_btn;
+
+	@FindBy(xpath = "//div[@class='vendorinp']/input[@class='vendor_invoice']")
+	@CacheLookup
+	WebElement Vendorinvoice;
+
+	public Reverse_PO_Page() {
+		
+		PageFactory.initElements(driver, this);
+		
+	}
+	
+	
+	public void Create_PO() throws InterruptedException {
+
+		driver.get("http://192.168.1.13/ds360/reverse_purchase_order");
+
+		Thread.sleep(2000);
+
+		Vendordropdown.click();
+
+		WebElement get = Innertext;
+
+		List<WebElement> option = get.findElements(By.xpath("//*[@id='search_vendor_chosen']/div/ul/li"));
+
+		for (WebElement options : option) {
+
+			String sta = options.getAttribute("innerHTML");
+
+			if (sta.contentEquals("sample1")) {
+
+				options.click();
+				break;
+			}
+		}
+
+		Description_text_field.sendKeys("Pn02");
+
+		autofillclick.click();
+		
+		Thread.sleep(2000);
+
+		searchpart.click();
+
+		switchtowindow();
+
+		Thread.sleep(3000);
+
+		searchbtn.click();
+		
+		Thread.sleep(2000);
+		
+		checkbox_selectall.click();
+
+		Addselectedtopobtn.click();
+
+		switchtoparentwindow();
+
+		Thread.sleep(3000);
+
+		Vendorinvoice.sendKeys("12");
+
+		Receive_Goods_btn.click();
+
+	}
+	
+
+	
+
+	
+}
+	
+	
+	

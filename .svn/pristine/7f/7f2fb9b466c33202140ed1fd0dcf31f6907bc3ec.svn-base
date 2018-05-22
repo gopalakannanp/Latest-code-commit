@@ -1,0 +1,50 @@
+package TestCases;
+
+import static org.testng.Assert.assertEquals;
+
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import Pages.HomePage;
+import Pages.LoginPage;
+import Pages.Manage_Purchase_Orders;
+import TestBase.TestBase;
+
+public class Manage_Purchase_Orders_Test extends TestBase {
+
+	LoginPage loginpage;
+
+	HomePage homepage;
+
+	Manage_Purchase_Orders MPO;
+
+	@BeforeMethod
+
+	public void setup() throws InterruptedException {
+
+		initialization();
+
+		loginpage = new LoginPage();
+
+		homepage = new HomePage();
+
+		MPO = new Manage_Purchase_Orders();
+
+		homepage = loginpage.login(prop.getProperty("un"), prop.getProperty("ps"));
+
+		homepage.ClickonManagePurchaseOrder();
+
+	}
+
+	@Test
+
+	public void test() throws InterruptedException {
+
+		String msg = MPO.Manage_PO();
+
+		assertEquals(msg, "Closed");
+	}
+
+
+}
+
