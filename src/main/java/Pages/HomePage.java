@@ -27,11 +27,11 @@ public class HomePage extends TestBase{
 	@CacheLookup
 	WebElement subPOmenu;
 	
-	@FindBy(xpath = "//div[@id='offbtn']/ul/li[2]/a[contains(text(),'Inventory')]")
+	@FindBy(xpath = "//div[@id='offbtn']/ul/li[2]/a")
 	@CacheLookup
-	WebElement Productmenu;
+	WebElement Inventory;
 	
-	@FindBy(xpath = "//div[@id='offbtn']/ul/li[2]/ul//a[contains(text(),'Products')]")
+	@FindBy(xpath = "//div[@id='offbtn']/ul/li[2]/ul/li[3]/a")
 	@CacheLookup
 	WebElement Productsubmenu;
 
@@ -46,6 +46,10 @@ public class HomePage extends TestBase{
 	@FindBy(xpath = "//div[@id='offbtn']/ul/li/ul/li/a[contains(text(),'Receive External Order')]")
 	@CacheLookup
 	WebElement CreatenewRPO;
+	
+	@FindBy(xpath="//div[@id='offbtn']/ul/li[2]/ul//a[contains(text(),'Quick Add Product')]")
+	@CacheLookup
+	WebElement QuickAddProduct;
 
 	public HomePage() {
 		
@@ -101,7 +105,7 @@ public class HomePage extends TestBase{
 
 		waitUntilElementClickable(Officedropdownbtn, 60);
 
-		mouseHover(Productmenu, Productsubmenu);
+		mouseHover(Inventory, Productsubmenu);
 
 		switchtowindow();
 
@@ -119,5 +123,20 @@ public class HomePage extends TestBase{
 
 		switchtowindow();
 
+	}
+	
+	public void ClickOnQuickAddProduct() {
+		
+		waitUntilElementClickable(Officedropdownbtn, 60);
+		
+		mouseHover(Inventory, QuickAddProduct);
+		
+		}
+	
+	public CreateNewVendor_NewCustomer CreateNewvendorpage() {
+		
+		driver.navigate().to("https://ktds.diveshopx.com/2.0.0/contacts/add_contact");
+		
+		return new CreateNewVendor_NewCustomer();
 	}
 }

@@ -46,6 +46,8 @@ public class QuickAddpopTest extends TestBase {
 		homepage = new HomePage();
 
 		homepage = loginpage.login(prop.getProperty("un"), prop.getProperty("ps"));
+		
+		homepage.ClickOnQuickAddProduct();
 
 		Qtf = new QuickAddPopup();
 	}
@@ -56,17 +58,18 @@ public class QuickAddpopTest extends TestBase {
 			String description, String Part_no, String Barcode) {
 
 		Qtf.QuickaddFunction(Partno, qtytoOrder, Cost, retailprice, description, Part_no, Barcode);
+		
 
 
 	}
 
-	@Test
+/*	@Test
 
 	public void QuickAddwithInstock(String Partno, String Stock, String Cost, String retailprice, String description) {
 
 		Qtf.QuickAddwithInstock(Partno, Stock, Cost, retailprice, description);
 
 	}
-
+*/
 
 }

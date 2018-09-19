@@ -1,6 +1,5 @@
 package Pages;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,11 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 import TestBase.TestBase;
 
 public class QuickAddPopup extends TestBase {
-
-	@FindBy(id = "search_number")
-
-	WebElement Search_part;
-
+	
+	
 	@FindBy(id = "part_number1")
 
 	WebElement part_number;
@@ -21,7 +17,7 @@ public class QuickAddPopup extends TestBase {
 
 	WebElement barcode;
 
-	@FindBy(id = "sp_stock1")
+	@FindBy(id = "stock1")
 
 	WebElement sp_stock;
 
@@ -70,10 +66,10 @@ public class QuickAddPopup extends TestBase {
 	public void QuickaddFunction(String Partno, String qtytoOrder, String Cost, String retailprice,
 			String description, String Part_no, String Barcode) {
 
-		Search_part.sendKeys(Partno);
+		part_number.sendKeys(Part_no);
 
-		Search_part.sendKeys(Keys.ENTER);
-
+		barcode.sendKeys(Barcode);
+		
 		PopupDescription.sendKeys(description);
 
 		sp_stock.clear();
@@ -96,39 +92,15 @@ public class QuickAddPopup extends TestBase {
 
 		Addmore.click();
 
-		part_number.sendKeys(Part_no);
-
-		barcode.sendKeys(Barcode);
-
-		PopupDescription.sendKeys(description);
-
-		sp_stock.clear();
-
-		sp_stock.sendKeys(qtytoOrder);
-
-		cost.clear();
-
-		cost.sendKeys(Cost);
-
-		Price.clear();
-
-		Price.sendKeys(retailprice);
-
-		selectDropdown(category, "Air Fills");
-
-		selectDropdown(vendor, "AVSVBC");
-
-		selectDropdown(manufacturer, "Watershot");
-
-		Addmore.click();
+		
 
 	}
 
-	public void QuickAddwithInstock(String Partno, String Stock, String Cost, String retailprice, String description) {
+/*	public void QuickAddwithInstock(String Partno, String Stock, String Cost, String retailprice, String description) {
 
-		Search_part.sendKeys(Partno);
+	//	Search_part.sendKeys(Partno);
 
-		Search_part.sendKeys(Keys.ENTER);
+		//Search_part.sendKeys(Keys.ENTER);
 
 		PopupDescription.sendKeys(description);
 
@@ -150,7 +122,7 @@ public class QuickAddPopup extends TestBase {
 
 		selectDropdown(manufacturer, "ASIAN");
 
-		Done.click();
+		Addmore.click();
 
-	}
+	}*/
 }

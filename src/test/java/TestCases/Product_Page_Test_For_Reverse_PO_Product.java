@@ -77,8 +77,7 @@ public class Product_Page_Test_For_Reverse_PO_Product extends TestBase {
 	 * })
 	 */
 
-	@Test(dataProvider = "getCRMTestData", dependsOnMethods = {
-			"TestCases.Manage_Purchase_Orders_Test.To_Verify_PO_Partial_Status_AND_LOGs" })
+	@Test(dataProvider = "getCRMTestData")
 
 	public void To_verify_Part_stock_Logs(String partnumber) throws InterruptedException {
 

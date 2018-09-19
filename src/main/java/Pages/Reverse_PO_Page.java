@@ -210,7 +210,7 @@ public class Reverse_PO_Page extends TestBase {
 			String serial4, String serial5) throws InterruptedException {
 
 
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
 		waitUntilElementClickable(Vendordropdown, 40);
 
