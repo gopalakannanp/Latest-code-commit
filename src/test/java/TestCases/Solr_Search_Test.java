@@ -3,6 +3,7 @@ package TestCases;
 import java.util.ArrayList;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -25,6 +26,8 @@ public class Solr_Search_Test extends TestBase {
 
 	String sheetName = "Barcode";
 	
+	String sheetName1 = "PartNumber";
+	
 	public Solr_Search_Test() {
 		
 		super();
@@ -34,6 +37,13 @@ public class Solr_Search_Test extends TestBase {
 	@DataProvider
 	public Object[][] TestData() {
 		Object data[][] = TestUtil.getTestData(sheetName);
+		return data;
+	}
+	
+	
+	@DataProvider
+	public Object[][] TestData1() {
+		Object data[][] = TestUtil.getTestData(sheetName1);
 		return data;
 	}
 	
@@ -54,7 +64,7 @@ public class Solr_Search_Test extends TestBase {
   }
   
   
-  @Test (dataProvider = "TestData", enabled = true)
+/*  @Test (dataProvider = "TestData", enabled = true)
   
   public void To_Verify_Barcode_Scanning(String Barcode) throws InterruptedException {
 	  
@@ -69,23 +79,29 @@ public class Solr_Search_Test extends TestBase {
 	  Assert.assertEquals(Solr1, Barcode);
 	  
 	  	  
-  }
+  }*/
   
   
- /* @Test
+  @Test(dataProvider="TestData1")
  
   
- public void To_Verify_Part_Number_Scanning() throws InterruptedException {
+ public void To_Verify_Part_Number_Scanning(String partnumber) throws InterruptedException {
 	  
-	  String Solr_message1 =Solr.Part_Number_Scanning();
+	  ArrayList<String> Solr_message1 =Solr.Part_Number_Scanning(partnumber);
 	  
-	  Assert.assertEquals(Solr_message1, "REFRESH SEARCH RESULT");
+	  String Solr1=Solr_message1.get(0);
+	  
+	  String Solr2=Solr_message1.get(1);
+	    
+	  Assert.assertEquals(Solr1, "REFRESH SEARCH RESULT");
+	 
+	  Assert.assertEquals(Solr2, partnumber);
 	  
 	  	  
   }
   
   
-  @Test
+/*  @Test
   
   public void To_verify_Description_Search() {
 	  
@@ -94,9 +110,9 @@ public class Solr_Search_Test extends TestBase {
 	  Assert.assertEquals(Solr_message2, "REFRESH SEARCH RESULT");
 	  
   }
+  */
   
-  
-  @AfterMethod
+  /*@AfterMethod
   
   public void quite() {
 	  
