@@ -38,12 +38,17 @@ public class Solr_Search extends TestBase{
 	
 	WebElement get_barcode_value;
 	
+	@FindBy(id="p2_desc_0")
+	
+	WebElement part_number;
+	
 	
 	public Solr_Search() {
 		
 		PageFactory.initElements(driver, this);
 	}
 	
+	// Action for Barcode Scanning
 	
 	public ArrayList<String> Barcode_Scanning (String Barcode) throws InterruptedException {
 		
@@ -58,9 +63,7 @@ public class Solr_Search extends TestBase{
 		Search_Part.sendKeys(Keys.ENTER);
 								
 		String get_part_details=get_barcode_value.getAttribute("value");
-		
-		//System.out.println(get_part_details);
-			
+							
 		ArrayList<String> getdata = new ArrayList<String>();
 		
 		getdata.add(Solr_message);
@@ -71,20 +74,33 @@ public class Solr_Search extends TestBase{
 		
 			
 	}
+		
 	
-	
-	
-	public String Part_Number_Scanning() {
+	public ArrayList<String> Part_Number_Scanning(String partnumber) {
        
-		Search_Part.sendKeys("DA-022");
+		Search_Part.sendKeys(partnumber);
 		
 		waitUntilElementVisible(Solrmessage, 10);
 		
-		String Solr_message1 =gettext(Solrmessage);
+		String Solr_message1 = gettext(Solrmessage);
 		
 		Search_Part.sendKeys(Keys.ENTER);
 		
-		return Solr_message1;
+		String part_number_txt=part_number.getText();
+		
+		String [] partdesc=part_number_txt.split(",");
+		
+		String partlist1=partdesc[0];
+		
+		System.out.println();
+		
+		ArrayList<String> getdata = new ArrayList<String>();
+		
+		getdata.add(Solr_message1);
+		
+		getdata.add(partlist1);
+						    					
+		return getdata;
 		
 	}
 	
