@@ -3,15 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.Product_Page_Test_For_Reverse_PO_Product">
+      <class name="TestCases.Solr_Search_Test">
         <methods>
-          <include name="To_verify_Part_stock_Logs"/>
-          <include name="endReport"/>
-          <include name="setExtent"/>
+          <include name="To_Verify_Barcode_Scanning" invocation-numbers="5"/>
           <include name="setup"/>
-          <include name="down"/>
         </methods>
-      </class> <!-- TestCases.Product_Page_Test_For_Reverse_PO_Product -->
+      </class> <!-- TestCases.Solr_Search_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

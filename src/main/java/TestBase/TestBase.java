@@ -4,9 +4,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -123,6 +125,16 @@ public class TestBase {
 		driver.switchTo().window(parentw);
 
 	}
-
-
+	
+	public boolean isElementPresent(By by){
+        try{
+            driver.findElement(by).click();
+            return true;
+        }
+        catch(NoSuchElementException e){
+            return false;
+        }
+    }
+	
+	 
 }

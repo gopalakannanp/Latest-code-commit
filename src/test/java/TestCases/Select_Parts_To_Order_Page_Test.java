@@ -29,6 +29,8 @@ public class Select_Parts_To_Order_Page_Test extends TestBase {
 	HomePage homepage;
 
 	LoginPage loginpage;
+	
+	Solr_Search Solr;
 
 	static TestUtil util = new TestUtil();
 
@@ -58,8 +60,7 @@ public class Select_Parts_To_Order_Page_Test extends TestBase {
 		homepage= new HomePage();
 		
 		homepage=loginpage.login(prop.getProperty("un"), prop.getProperty("ps"));
-		
-		homepage.ClickonSelectPartsToOrderPage();
+			
 	}
 	
 	@Test(enabled = true, priority = 1)
@@ -75,63 +76,6 @@ public class Select_Parts_To_Order_Page_Test extends TestBase {
 
 	}
 
-	@Test(enabled = true)
-
-	public void To_Verify_ADD_TO_CART() throws InterruptedException {
-
-		extentTest = extent.startTest("To_Verify_ADD_TO_CART");
-
-		String Verify = selectorder.addtocart();
-
-		Assert.assertEquals(Verify, "Parts added to Cart successfully");
-
-
-	}
-
-	@Test(enabled = true)
-
-	public void To_Verify_Quick_ADD() throws InterruptedException {
-		
-		extentTest = extent.startTest("To_Verify_Quick_ADD");
-
-		selectorder.quickadd();
-
-	}
-	 
-	@AfterTest
-
-	public void endReport() {
-		extent.flush();
-		extent.close();
-	}
-
-	@AfterMethod
 	
-	public void close(ITestResult result) throws IOException {
-
-		if (result.getStatus() == ITestResult.FAILURE) {
-
-			extentTest.log(LogStatus.FAIL, "TEST CASE FAILED IS " + result.getName());
-
-			extentTest.log(LogStatus.FAIL, "TEST CASE FAILED IS " + result.getThrowable());
-
-			String screenshotPath = TestUtil.getScreenshot(driver, result.getName());
-
-			extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(screenshotPath));
-
-		} else if (result.getStatus() == ITestResult.SKIP) {
-
-			extentTest.log(LogStatus.SKIP, "Test Case SKIPPED IS " + result.getName());
-
-		} else if (result.getStatus() == ITestResult.SUCCESS) {
-
-			extentTest.log(LogStatus.PASS, "Test Case PASSED IS " + result.getName());
-
-		}
-
-		extent.endTest(extentTest);
-
-		driver.quit();
-	}
 
 }

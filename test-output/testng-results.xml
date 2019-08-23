@@ -1,32 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="10" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3953" started-at="2018-09-19T12:02:43Z" finished-at="2018-09-19T12:02:47Z">
+  <suite name="Default suite" duration-ms="178374" started-at="2019-08-23T07:12:06Z" finished-at="2019-08-23T07:15:05Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3953" started-at="2018-09-19T12:02:43Z" finished-at="2018-09-19T12:02:47Z">
-      <class name="TestCases.Product_Page_Test_For_Reverse_PO_Product">
-        <test-method status="PASS" signature="setExtent()[pri:0, instance:TestCases.Product_Page_Test_For_Reverse_PO_Product@1fc2b765]" name="setExtent" is-config="true" duration-ms="463" started-at="2018-09-19T12:02:43Z" finished-at="2018-09-19T12:02:44Z">
+    <test name="Default test" duration-ms="178374" started-at="2019-08-23T07:12:06Z" finished-at="2019-08-23T07:15:05Z">
+      <class name="TestCases.Solr_Search_Test">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="setup" is-config="true" duration-ms="12491" started-at="2019-08-23T07:12:07Z" finished-at="2019-08-23T07:12:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setExtent -->
-        <test-method status="FAIL" signature="To_verify_Part_stock_Logs(java.lang.String)[pri:0, instance:TestCases.Product_Page_Test_For_Reverse_PO_Product@1fc2b765]" name="To_verify_Part_stock_Logs" duration-ms="2499" started-at="2018-09-19T12:02:44Z" data-provider="getCRMTestData" finished-at="2018-09-19T12:02:46Z">
-          <exception class="org.testng.internal.reflect.MethodMatcherException">
-            <message>
-              <![CDATA[
-Data provider mismatch
-Method: To_verify_Part_stock_Logs([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(org.apache.poi.xssf.usermodel.XSSFCell) DS1006]]]>
-            </message>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="To_Verify_Barcode_Scanning(java.lang.String)[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="To_Verify_Barcode_Scanning" duration-ms="1811" started-at="2019-08-23T07:12:19Z" data-provider="TestData" finished-at="2019-08-23T07:12:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4897025436718]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Verify_Barcode_Scanning -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="setup" is-config="true" duration-ms="12277" started-at="2019-08-23T07:12:21Z" finished-at="2019-08-23T07:12:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="To_Verify_Barcode_Scanning(java.lang.String)[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="To_Verify_Barcode_Scanning" duration-ms="1955" started-at="2019-08-23T07:12:33Z" data-provider="TestData" finished-at="2019-08-23T07:12:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4897025436688]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Verify_Barcode_Scanning -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="setup" is-config="true" duration-ms="12250" started-at="2019-08-23T07:12:35Z" finished-at="2019-08-23T07:12:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="To_Verify_Barcode_Scanning(java.lang.String)[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="To_Verify_Barcode_Scanning" duration-ms="1912" started-at="2019-08-23T07:12:47Z" data-provider="TestData" finished-at="2019-08-23T07:12:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4897025436671]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Verify_Barcode_Scanning -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="setup" is-config="true" duration-ms="12366" started-at="2019-08-23T07:12:49Z" finished-at="2019-08-23T07:13:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="To_Verify_Barcode_Scanning(java.lang.String)[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="To_Verify_Barcode_Scanning" duration-ms="1981" started-at="2019-08-23T07:13:02Z" data-provider="TestData" finished-at="2019-08-23T07:13:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4897025436664]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Verify_Barcode_Scanning -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="setup" is-config="true" duration-ms="12133" started-at="2019-08-23T07:13:04Z" finished-at="2019-08-23T07:13:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="To_Verify_Barcode_Scanning(java.lang.String)[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="To_Verify_Barcode_Scanning" duration-ms="1834" started-at="2019-08-23T07:13:16Z" data-provider="TestData" finished-at="2019-08-23T07:13:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4897025436657]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Verify_Barcode_Scanning -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="setup" is-config="true" duration-ms="12458" started-at="2019-08-23T07:13:18Z" finished-at="2019-08-23T07:13:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="To_Verify_Barcode_Scanning(java.lang.String)[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="To_Verify_Barcode_Scanning" duration-ms="36110" started-at="2019-08-23T07:13:30Z" data-provider="TestData" finished-at="2019-08-23T07:14:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4897025436640]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
-Data provider mismatch
-Method: To_verify_Part_stock_Logs([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(org.apache.poi.xssf.usermodel.XSSFCell) DS1006]
-at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:45)
-at org.testng.internal.Parameters.injectParameters(Parameters.java:796)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:983)
+              <![CDATA[java.lang.NullPointerException
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy9.toString(Unknown Source)
+at java.lang.String.valueOf(String.java:2994)
+at java.lang.StringBuilder.append(StringBuilder.java:131)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:306)
+at java.lang.String.valueOf(String.java:2994)
+at java.lang.StringBuilder.append(StringBuilder.java:131)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:267)
+at TestBase.TestBase.waitUntilElementVisible(TestBase.java:73)
+at Pages.Solr_Search.Barcode_Scanning(Solr_Search.java:54)
+at TestCases.Solr_Search_Test.To_Verify_Barcode_Scanning(Solr_Search_Test.java:61)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
@@ -46,15 +139,71 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_verify_Part_stock_Logs -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:TestCases.Product_Page_Test_For_Reverse_PO_Product@1fc2b765]" name="endReport" is-config="true" duration-ms="929" started-at="2018-09-19T12:02:46Z" finished-at="2018-09-19T12:02:47Z">
+        </test-method> <!-- To_Verify_Barcode_Scanning -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="setup" is-config="true" duration-ms="13585" started-at="2019-08-23T07:14:06Z" finished-at="2019-08-23T07:14:20Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- TestCases.Product_Page_Test_For_Reverse_PO_Product -->
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="To_Verify_Barcode_Scanning(java.lang.String)[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="To_Verify_Barcode_Scanning" duration-ms="1926" started-at="2019-08-23T07:14:20Z" data-provider="TestData" finished-at="2019-08-23T07:14:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4897025438576]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Verify_Barcode_Scanning -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="setup" is-config="true" duration-ms="12797" started-at="2019-08-23T07:14:22Z" finished-at="2019-08-23T07:14:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="To_Verify_Barcode_Scanning(java.lang.String)[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="To_Verify_Barcode_Scanning" duration-ms="2046" started-at="2019-08-23T07:14:35Z" data-provider="TestData" finished-at="2019-08-23T07:14:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4897025438583]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Verify_Barcode_Scanning -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="setup" is-config="true" duration-ms="11791" started-at="2019-08-23T07:14:37Z" finished-at="2019-08-23T07:14:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="To_Verify_Barcode_Scanning(java.lang.String)[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="To_Verify_Barcode_Scanning" duration-ms="1898" started-at="2019-08-23T07:14:48Z" data-provider="TestData" finished-at="2019-08-23T07:14:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4897025436626]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Verify_Barcode_Scanning -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="setup" is-config="true" duration-ms="12423" started-at="2019-08-23T07:14:50Z" finished-at="2019-08-23T07:15:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="To_Verify_Barcode_Scanning(java.lang.String)[pri:0, instance:TestCases.Solr_Search_Test@c81cdd1]" name="To_Verify_Barcode_Scanning" duration-ms="1903" started-at="2019-08-23T07:15:03Z" data-provider="TestData" finished-at="2019-08-23T07:15:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4897025436619]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Verify_Barcode_Scanning -->
+      </class> <!-- TestCases.Solr_Search_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
